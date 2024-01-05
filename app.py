@@ -144,7 +144,12 @@ def main():
             v_model2 = st.selectbox(label='Model',
                                     options=list(model_dict.keys()),
                                     key='mdl2')
-            but_predict2 = st.button("Predict!", type='primary', key='pred2')
+            
+            if uploaded:
+                st.session_state.disabled = False
+            else:
+                st.session_state.disabled = True
+            but_predict2 = st.button("Predict!", type='primary', key='pred2', disabled=st.session_state.disabled)
         
         if but_predict2:
             st.divider()
