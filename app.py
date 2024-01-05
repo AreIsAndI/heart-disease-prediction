@@ -18,11 +18,11 @@ def main():
     st.header('Predict your Heart Disease by Irfan! :sparkling_heart:')
 
     # initialize and load the data, scaler, and model
-    loaded_data = pd.read_csv('heart-disease-prediction/Include/final-hungarian-data.csv')
-    scaler_filename = 'heart-disease-prediction/Include/scaler.save' 
-    knn_filename = 'heart-disease-prediction/Include/knn_model.sav' 
-    rf_filename = 'heart-disease-prediction/Include/rf_model.sav' 
-    gbc_filename = 'heart-disease-prediction/Include/gbc_model.sav'
+    loaded_data = pd.read_csv('Include/final-hungarian-data.csv')
+    scaler_filename = 'Include/scaler.save' 
+    knn_filename = 'Include/knn_model.sav' 
+    rf_filename = 'Include/rf_model.sav' 
+    gbc_filename = 'Include/gbc_model.sav'
     knn_loaded_model = jb.load(knn_filename) 
     rf_loaded_model = jb.load(rf_filename) 
     gbc_loaded_model = jb.load(gbc_filename)
